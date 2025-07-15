@@ -1,0 +1,305 @@
+/* FertilizerStore.css */
+
+#store-main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5fff5;
+    margin: 3rem 0;
+    padding: 0;
+  }
+  
+  .store-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .store-title {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  
+  .product-card {
+    background: #ffffff;
+    border: 2px solid #c8e6c9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    width: 95%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .product-name {
+    color: #388e3c;
+    margin: 15px 0 5px;
+    font-size: 1.3rem;
+  }
+  
+  .product-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 15px;
+  }
+  
+  .buy-button {
+    padding: 10px 20px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: #388e3c;
+  }
+  
+  
+
+  .form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(50,50,50,0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+  }
+  
+  .booking-form {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  .booking-form h2 {
+    text-align: center;
+    color: #2d3436;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #55efc4;
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .BookingForm label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: 500;
+    color: #2d3436;
+    font-size: 15px;
+  }
+  
+  .BookingForm input,
+  .BookingForm textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+  }
+  
+  .BookingForm input:focus,
+  .BookingForm textarea:focus {
+    border-color: #00cec9;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.2);
+  }
+  
+  .BookingForm textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .BookingForm button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #00cec9, #0984e3);
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .BookingForm button:hover {
+    background: linear-gradient(135deg, #0984e3, #00cec9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 206, 201, 0.4);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #b2bec3;
+    transition: 0.2s;
+  }
+  
+  .close-btn:hover {
+    color: #2d3436;
+    transform: scale(1.2);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Quantity Field Styles */
+.BookingForm label[for="quantity"] {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.BookingForm input[type="number"]#quantity {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Quantity Increment/Decrement Buttons */
+.BookingForm .quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.BookingForm .quantity-wrapper button {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40px;
+}
+
+.BookingForm .quantity-wrapper button:hover {
+  background-color: #1b4c34;
+}
+
+.BookingForm .quantity-wrapper input[type="number"] {
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.BookingForm .quantity-wrapper input[type="number"]:focus {
+  outline: none;
+  border-color: #2d6a4f;
+}
+
+.thank-you-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.thank-you-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInUp 0.4s ease;
+  max-width: 400px;
+}
+
+.thank-you-box h2 {
+  font-size: 28px;
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+.thank-you-box p {
+  font-size: 18px;
+  color: #444;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  

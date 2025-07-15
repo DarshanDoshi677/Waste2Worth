@@ -1,0 +1,283 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f7; /* Light background for a cooler feel */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main App Layout */
+.app {
+  display: flex;
+  margin-top: 3.5rem;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #7d9db1; /* Soft cool blue */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Darker shadow for a more modern look */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #99bfc6; /* Softer shade for list items */
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #2b8f8e; /* Bold hover color */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.sidebar ul li:active {
+  transform: scale(1); /* Reset scale on click */
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  color: white;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.topbar h3 {
+  font-size: 24px;
+}
+
+.topbar .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.topbar button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.topbar button:hover {
+  background-color: #c0392b;
+}
+
+.topbar button:active {
+  background-color: #a93226;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9; /* Slight gray background for better contrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Shared Panel Style */
+.dashboard,
+.profile,
+.donations,
+.history,
+.settings {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dashboard h2,
+.profile h2,
+.donations h2,
+.history h2,
+.settings h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Dashboard Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.stat-card {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.stat-card:hover {
+  background-color: #3498db;
+  transform: translateY(-10px);
+}
+
+.stat-card h3 {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 40rem;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: none; /* Remove shadow for mobile view */
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .sidebar ul li {
+    padding: 12px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
+
+/* Donate History Form */
+.donate-history-page {
+  width: 80%;
+  max-width: 35rem;
+  margin: 8rem auto 2rem auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.donate-history-page h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.donation-form-container {
+  background-color: #fff;
+  padding: 30px;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+}
+
+.submit-button:active {
+  background-color: #3e8e41;
+  transform: translateY(0);
+}
