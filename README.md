@@ -71,11 +71,15 @@ Waste2Worth/
 3.Open http://localhost:5173/ in your browser
 
 
-Sample Credentials
-Role	Email	            Password
-User	user@example.com	user123
-NGO	ngo@example.com	    ngo123
-Admin	admin@example.com	admin123
+## 🧪 Sample Credentials
+
+| Role  | Email             | Password   |
+|-------|-------------------|------------|
+| User  | user@example.com  | user123    |
+| NGO   | ngo@example.com   | ngo123     |
+| Admin | admin@example.com | admin123   |
+
+> 🔐 Note: Customize these in your database or registration logic.
 
 🔐 Note: Customize these in your database or registration logic.
 
