@@ -68,15 +68,13 @@ Waste2Worth/
    ```bash
    npm install
    npm run dev
-
-
-Open http://localhost:5173/ in your browser
+3.Open http://localhost:5173/ in your browser
 
 
 Sample Credentials
-Role	Email	Password
+Role	Email	            Password
 User	user@example.com	user123
-NGO	ngo@example.com	ngo123
+NGO	ngo@example.com	    ngo123
 Admin	admin@example.com	admin123
 
 🔐 Note: Customize these in your database or registration logic.
